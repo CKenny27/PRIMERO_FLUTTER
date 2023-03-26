@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomeScreen.routeName,
       routes: {
-        HomeScreen.routeName: (_) => HomeScreen(),
+        HomeScreen.routeName: (_) => const HomeScreen(),
+        NewUserScreen.routeName: (_) => const NewUserScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
