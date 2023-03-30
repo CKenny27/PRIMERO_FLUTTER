@@ -10,13 +10,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (_) => const HomeScreen(),
         NewUserScreen.routeName: (_) => const NewUserScreen(),
+        DetailUserScreen.routeName: (_) => const DetailUserScreen(),
       },
       debugShowCheckedModeBanner: false,
     );

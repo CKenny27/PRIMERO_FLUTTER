@@ -24,10 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView.separated(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const ListTile(
-            title: Text('Nombre'),
-            subtitle: Text('correo@correo.com'),
-            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          return ListTile(
+            title: const Text('Nombre'),
+            subtitle: const Text('correo@correo.com'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () =>
+                Navigator.pushNamed(context, DetailUserScreen.routeName),
           );
         },
         separatorBuilder: (context, index) => const Divider(),

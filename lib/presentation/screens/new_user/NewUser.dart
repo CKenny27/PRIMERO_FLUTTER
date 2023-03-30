@@ -29,7 +29,8 @@ class _NewUserScreenState extends State<NewUserScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Nuevo usuario'),
-        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 25.0),
+        titleTextStyle: const TextStyle(
+            fontSize: 36.0, fontStyle: FontStyle.italic, color: Colors.white),
         backgroundColor: const Color.fromRGBO(14, 126, 57, 0.997),
       ),
       body: Padding(
