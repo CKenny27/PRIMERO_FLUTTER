@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class TextFieldWidget extends StatelessWidget {
   final String label;
   final String placeholder;
-  final IconData icon;
+  final IconData? icon;
+  final bool isTextArea;
 
   const TextFieldWidget({
-    super.key,
+    Key? key,
     required this.label,
     required this.placeholder,
-    required this.icon,
-  });
+    this.icon,
+    this.isTextArea = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class TextFieldWidget extends StatelessWidget {
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(10.0)),
         child: TextField(
+          maxLines: isTextArea ? 6 : null,
           decoration: InputDecoration(
               border: InputBorder.none,
               hintText: placeholder,
